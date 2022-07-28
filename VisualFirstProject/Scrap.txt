@@ -1,0 +1,7 @@
+def findchar(request):
+        allchar=string.ascii_uppercase
+        arr=[]
+        for i in range(50):
+            x=random.randint(0,25)
+            arr.append(allchar[x%10])
+        return render(request,'games.html',{'chars':arr})

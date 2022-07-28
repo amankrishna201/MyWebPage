@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {%endblock title%}</title>
+    <!--Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration:none;
+            box-sizing:border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family:cursive;
+        }
+        #nav{
+            background-color:rgb(255, 247, 0);
+            height:60px;
+            width:100%;
+            text-format:uppercase;
+            text-align:center;
+        }
+        .navelems{
+            font-weight:bold;
+            padding:6px;
+            float:left;
+            margin-right:20px;
+            color: black;
+            font-size:20px;
+            border-radius: 15px;
+            
+        }
+        .nav-link{
+          color:black;
+        }
+        
+    
+        a.active,a:hover{
+            background:rgb(237, 113, 113);   
+            text-shadow:2px white;
+            border-radius:5px;
+            box-shadow:2px black;
+            transition:0.5s;
+        }
+        #navimg{
+            margin-right:30px;
+            height:30px;
+            width:30px;
+            border-radius:50%;
+        }
+        #dynamicpage{
+            height:1%;
+            width:100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="nav" >
+        <nav class="navbar navbar-expand-lg" style="background-color:rgb(255, 247, 0)">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar w/ text</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/api">How I Use Apis</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/contact">Contact</a>
+                  </li>
+                  
+                </ul>
+                <span class="navbar-text black">
+                  Portfolio Website 
+                </span>
+              </div>
+            </div>
+          </nav>
+    </div>
+<!--This is the dynamic page which starts with landpage.html-->
+    <div id="dynamicpage" style="background-color:black;height:95%;">
+      
+        {%block body%}
+        
+        {%endblock body%}
+    </div>
+
+
+</body>
+</html>

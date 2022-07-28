@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block body%}
+<style>
+.box1{
+  width:20%;
+  hegiht:20%;
+  float:center;
+  margin-left:25%;
+}
+</style>
+<div>
+  {%block body1%}
+  {%endblock body1%}
+  
+<address class="center align-text">
+    Contact Me: <a href="mailto:amankrishnadww20@gmail.com"<h2>Email</h2></a>
+</address>
+<br>
+<div style="border:1px solid white;padding:5px;">
+  <h2 >Subscribe Your Monthly Newspaper Free</h2>
+  <form class="box1 container needs-validation" method="POST" action="congratulation">
+    {% csrf_token %}
+    First name: <input name="firstname"placeholder="First name"><br>
+    Last name: <input name="lastname"placeholder="Last name"><br>
+    Username: <input name="username"placeholder="Username"><br>
+    Branch: <br><input name="branch"placeholder="Branch"><br>
+    <br>
+    <button class="primary" type='submit'>Submit</button>
+  </form>
+</div>
+</div>
+
+{%endblock body%}
